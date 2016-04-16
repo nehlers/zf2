@@ -22,6 +22,16 @@ return array(
                     ),
                 ),
             ),
+            'produto' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/produto/cadastrar',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\produto',
+                        'action'     => 'cadastrar',
+                    ),
+                ),
+            ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
@@ -75,7 +85,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => Controller\IndexController::class
+            'Application\Controller\Index' => Controller\IndexController::class,
+            'Application\Controller\produto' => Controller\ProdutoController::class,
         ),
     ),
     'view_manager' => array(
